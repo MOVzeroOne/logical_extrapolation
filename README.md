@@ -11,3 +11,7 @@ first image of each gif is the maze, the second start and goal, third the ground
 ![](13x13.gif)
 <br><h2>59x59 (100 steps)</h2><br>
 ![](59x59.gif)
+<br><h2>201x201 (1000 steps)</h2><br>
+![](201x201.gif)
+<br><h2>801x801 (7000 steps, the visualization has 100 steps per frame update)</h2><br>
+![](801x801.gif)
