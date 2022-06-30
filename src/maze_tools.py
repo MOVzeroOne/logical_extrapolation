@@ -280,7 +280,7 @@ if __name__ == "__main__":
         generator = maze_generator(num_cells,num_cells)
         print(generator.size())
 
-        manager = Dataset_manager("test_maze_"+ str(generator.size()[0]) +"by" + str(generator.size()[1]) + ".csv")
+        manager = Dataset_manager("maze_"+ str(generator.size()[0]) +"by" + str(generator.size()[1]) + ".csv")
 
         for i in range(1000): #1000
             maze = generator.generate(maze_num=i)
