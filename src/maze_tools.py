@@ -12,13 +12,13 @@ class maze_generator():
     """
     implementation of Wilson's algorithm for maze generation    
     """
-    def __init__(self,num_height_cells,num_width_cells):
-
-        self.num_width_cells = num_width_cells
-        self.num_height_cells = num_height_cells
-        self.width = self.num_width_cells*2+1
-        self.height = self.num_height_cells*2 +1
-    
+    def __init__(self,width,height):
+        
+        self.width = width
+        self.height = height
+        self.num_width_cells = (self.width-1)/2
+        self.num_height_cells = (self.height-1)/2
+        
     def size(self):
         return (self.num_height_cells+self.num_height_cells-1,self.num_width_cells+ self.num_width_cells-1)
     
