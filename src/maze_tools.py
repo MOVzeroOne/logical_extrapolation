@@ -20,7 +20,7 @@ class maze_generator():
         self.num_height_cells = (self.height-1)/2
         
     def size(self):
-        return (self.num_height_cells+self.num_height_cells-1,self.num_width_cells+ self.num_width_cells-1)
+        return (self.width,self.height)
     
     def _set_cell_road(self,node):
         """sets a cell to be a road"""
@@ -276,7 +276,7 @@ class Dataset_manager():
 
 if __name__ == "__main__":
     solver = bfs_solver()
-    for num_cells in [5,7,30,101,401]: #9x9, 13x13, 59x59, 201x201, 801x801
+    for num_cells in [9,13,59,201,801]: #9x9, 13x13, 59x59, 201x201, 801x801
         generator = maze_generator(num_cells,num_cells)
         print(generator.size())
 
@@ -284,6 +284,6 @@ if __name__ == "__main__":
 
         for i in range(1000): #1000
             maze = generator.generate(maze_num=i)
+
             for _ in range(100): #100
                 manager.save(solver.solve(maze))
-            
